@@ -4,7 +4,16 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
-function ProjectCard(props) {
+interface IProps {
+    imgPath: string;
+    githubLink: string;
+    title: string;
+    description: string;
+    demoLink: string;
+    isBlog?: "Blog" | "GitHub";
+}
+
+function ProjectCard(props: IProps) {
     return (
         <Card className="project-card-view">
             <Card.Img variant="top" src={props.imgPath} alt="card-img" style={{ maxHeight: 215 }} />

@@ -1,15 +1,14 @@
-import nestImg from '../assets/project/nestjs.png';
-import nextjsImg from '../assets/project/nextjs.jpeg';
-import reactNativeImg from '../assets/project/react-native.png';
-import reactUltimateImg from '../assets/project/react-ultimate.png';
-import springMvcImg from '../assets/project/spring-mvc.png';
-import springRestImg from '../assets/project/spring-rest.png';
+import nestImg from 'assets/project/nestjs.png';
+import nextjsImg from 'assets/project/nextjs.jpeg';
+import reactNativeImg from 'assets/project/react-native.png';
+import reactUltimateImg from 'assets/project/react-ultimate.png';
+import springMvcImg from 'assets/project/spring-mvc.png';
+import springRestImg from 'assets/project/spring-rest.png';
 
 export const APP_DATA = {
-    YOUTUBE_URL: "https://www.youtube.com/@hoidanit",
-    TIKTOK_URL: "https://www.tiktok.com/@hoidanit",
-    UDEMY_URL: "https://www.udemy.com/user/eric-7039/",
-    FACEBOOK_URL: "https://www.facebook.com/askITwithERIC/"
+    LINKEDIN_URL: "https://www.linkedin.com/in/khoivt02/",
+    FACEBOOK_URL: "https://www.facebook.com/vukhoi0212",
+    EMAIL_URL: "sir.vukhoi@gmail.com"
 }
 
 export const EXPERIENCES = [
@@ -20,12 +19,12 @@ export const EXPERIENCES = [
             en: "Fullstack Developer"
         },
         company: {
-            vi: "Công ty ABCXYZ Ltd.",
-            en: "ABCXYZ Ltd."
+            vi: "Công ty FPT SoftWare",
+            en: "FPT SoftWare"
         },
         duration: {
-            vi: "Jan 2024 - Hiện tại",
-            en: "Jan 2024 - Present"
+            vi: "Jan 2023 - Hiện tại",
+            en: "Jan 2023 - Present"
         }
     },
     {
@@ -60,6 +59,65 @@ export const EXPERIENCES = [
         }
     }
 ]
+
+export const ABOUT = 
+    {
+        knowWho: {
+            vi: "Biết Tôi",
+            en: "Know Who "
+        },
+        IAm: {
+            vi: "Là Ai",
+            en: "I AM"
+        },
+        introduceName: {
+            vi: "Xin chào mọi người, mình là Vũ Khôi, hiện đang sinh sống tại Hà Nội, Việt Nam.",
+            en: "Hi Everyone, I am Vu Khoi from Hanoi, VietNam."
+        },
+        introduceJob: {
+            vi: "Mình đang làm việc với vai trò là front end dev.",
+            en: "I am currently employed as a front end developer."
+        },
+        introduceAcademic: {
+            vi: "Mình đã hoàn thành chương trình cử nhân Kỹ Thuật Phần Mềm tại đại học FPT.",
+            en: "I have completed Bachelor's degree in Software Engineer at FPT University."
+        },
+        introduceHabit: {
+            vi: "Ngoài lập trình ra mình còn một vài sở thích khác!",
+            en: "Apart from coding, some other activities that I love to do!"
+        },
+        habits: [
+            {
+                id: 1, vi: "Chơi game", en: "Playing Games"
+            },
+            {
+                id: 2, vi: "Nghe nhạc", en: "Listening to music"
+            },
+            {
+                id: 3, vi: "Du lịch", en: "Travelling"
+            },
+        ],
+        education: {
+            vi: "Học Vấn",
+            en: "Education"
+        },
+        major: {
+            vi: "Kỹ thuật phần mềm",
+            en: "Software Engineer"
+        },
+        university: {
+            vi: "Đại học FPT",
+            en: "FPT University"
+        },
+        findMeOn: {
+            vi: "KẾT NỐI VỚI TÔI",
+            en: "FIND ME ON"
+        },
+        contactMe: {
+            vi: "Liên hệ với tôi",
+            en: "Contact me"
+        }
+    }
 
 export const PROJECTS = [
     {

@@ -8,7 +8,7 @@ import blurImg from "assets/blur-23.svg";
 import { useCurrentApp } from "components/context/app.context";
 import { useTranslation } from "react-i18next";
 
-type TLanguage = "vi" | "en";
+export type TLanguage = "vi" | "en";
 
 const Experience = () => {
   const { theme } = useCurrentApp();

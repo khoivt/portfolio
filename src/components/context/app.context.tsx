@@ -1,43 +1,58 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
-const AppContext = createContext(null);
+interface IAppContext {
+    theme: ThemeContextType;
+    setTheme: (v: ThemeContextType) => void;
+}
+export type ThemeContextType = "light" | "dark";
+
+const AppContext = createContext<IAppContext | null>(null);
 
 interface IProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export const AppContextProvider = (props: IProps) => {
-    const initialTheme = localStorage.getItem("theme") || "light";
-    const [theme, setTheme] = useState<string>(() => {
-        const initialTheme = localStorage.getItem("theme") || "light";
-        return initialTheme;
-    });
+  const [theme, setTheme] = useState<ThemeContextType>(() => {
+    const initialTheme =
+      (localStorage.getItem("theme") as ThemeContextType) || "light";
+    return initialTheme;
+  });
 
-    useEffect(() => {
-        const mode = localStorage.getItem("theme");
-        if (mode) {
-            setTheme(mode);
-            document.documentElement.setAttribute('data-bs-theme', mode);
-        }
-    }, [])
+  useEffect(() => {
+    const mode = localStorage.getItem("theme") as ThemeContextType;
+    if (mode) {
+      setTheme(mode);
+      document.documentElement.setAttribute("data-bs-theme", mode);
+    }
+  }, []);
 
-    return (
-        <AppContext.Provider value={{
-            theme, setTheme
-        }}>
-            {props.children}
-        </AppContext.Provider>
-    );
-}
+  return (
+    <AppContext.Provider
+      value={{
+        theme,
+        setTheme,
+      }}
+    >
+      {props.children}
+    </AppContext.Provider>
+  );
+};
 
 export const useCurrentApp = () => {
-    const currentAppContext = useContext(AppContext);
+  const currentAppContext = useContext(AppContext);
 
-    if (!currentAppContext) {
-        throw new Error(
-            "useCurrentApp has to be used within <AppContext.Provider>"
-        );
-    }
+  if (!currentAppContext) {
+    throw new Error(
+      "useCurrentApp has to be used within <AppContext.Provider>"
+    );
+  }
 
-    return currentAppContext;
+  return currentAppContext;
 };

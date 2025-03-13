@@ -6,10 +6,18 @@ import ResizeButton from "components/sections/resize.button";
 import { APP_DATA } from 'helpers/data';
 import { MdFileDownload } from "react-icons/md";
 import { AiFillFire } from "react-icons/ai";
+type Props = {
+    onClickExp: () => void
+}
 
-const HeroLeft = () => {
+const HeroLeft = ({onClickExp}: Props) => {
 
     const { t } = useTranslation();
+
+    const downloadCV = (url: string)=> {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
 
     return (
         <div className='hero-left'>
@@ -41,10 +49,9 @@ const HeroLeft = () => {
                 className="mt-md-6 mt-3 mb-md-5 mb-2"
             >
                 <SocialMedia
-                    youtube={APP_DATA.YOUTUBE_URL}
                     facebook={APP_DATA.FACEBOOK_URL}
-                    tiktok={APP_DATA.TIKTOK_URL}
-                    udemy={APP_DATA.UDEMY_URL}
+                    linkedin={APP_DATA.LINKEDIN_URL}
+                    email={APP_DATA.EMAIL_URL}
                 />
             </div>
             <div className="d-md-flex d-none gap-4">
@@ -56,10 +63,12 @@ const HeroLeft = () => {
                         border: "1px solid var(--border-hero-right)",
                         color: "var(--text-white-1)"
                     }}
+                    onClick={onClickExp}
                 />
                 <ResizeButton
                     btnText={t("heroSection.cv")}
                     btnIcons={<MdFileDownload />}
+                    onClick={() => downloadCV("https://drive.google.com/file/d/1QTye_xGgsT7hhn924_RT7bhHynoREaZG/view?usp=sharing")}
                 />
 
             </div>
