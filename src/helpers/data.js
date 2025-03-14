@@ -23,7 +23,7 @@ export const EXPERIENCES = [
             en: "FPT SoftWare"
         },
         duration: {
-            vi: "Jan 2023 - Hiện tại",
+            vi: "Tháng 1/2023 - Hiện tại",
             en: "Jan 2023 - Present"
         }
     },

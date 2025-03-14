@@ -39,7 +39,7 @@ const About = () => {
             </div>
           </div>
           <div>
-            <p>{ABOUT.introduceAcademic[currentLanguage]}</p>
+            <p>{ABOUT.introduceHabit[currentLanguage]}</p>
             <ul>
                 {ABOUT.habits.map((habit) => <li>{habit[currentLanguage]}</li>)}
             </ul>
