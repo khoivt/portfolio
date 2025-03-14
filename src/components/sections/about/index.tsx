@@ -109,7 +109,7 @@ const About = () => {
           <SocialMedia
             facebook={APP_DATA.FACEBOOK_URL}
             linkedin={APP_DATA.LINKEDIN_URL}
-            email={APP_DATA.EMAIL_URL}
+            github={APP_DATA.GITHUB_URL}
           />
         </Col>
         <Col md={6} xs={12}>

@@ -51,7 +51,7 @@ const HeroLeft = ({onClickExp}: Props) => {
                 <SocialMedia
                     facebook={APP_DATA.FACEBOOK_URL}
                     linkedin={APP_DATA.LINKEDIN_URL}
-                    email={APP_DATA.EMAIL_URL}
+                    github={APP_DATA.GITHUB_URL}
                 />
             </div>
             <div className="d-md-flex d-none gap-4">
