@@ -41,7 +41,7 @@ const About = () => {
           <div>
             <p>{ABOUT.introduceHabit[currentLanguage]}</p>
             <ul>
-                {ABOUT.habits.map((habit) => <li>{habit[currentLanguage]}</li>)}
+                {ABOUT.habits.map((habit) => <li key={habit.id}>{habit[currentLanguage]}</li>)}
             </ul>
           </div>
           <div>
