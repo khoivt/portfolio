@@ -1,5 +1,5 @@
 # React TypeScript Portfolio (JavaScript) FINAL PROJECT
-Đây là source code final (JavaScript) cho series React TypeScript Portfolio (Vite) của tác giả Hỏi Dân IT (Eric)
+Đây là source code đã được update bởi Vu Khoi
 
 ### Môi trường chạy dự án: Node.js v20.14.0
 https://nodejs.org/download/release/v20.14.0/
